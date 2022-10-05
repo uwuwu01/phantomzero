@@ -224,7 +224,7 @@ public class fightinghandler : MonoBehaviour
                     attackSr.gameObject.GetComponent<VideoPlayer>().clip = p1Special;
                     attackSr.gameObject.GetComponent<VideoPlayer>().Play();
                     rawAttack.SetActive(true);
-                    yield return new WaitForSeconds(3);
+                    yield return new WaitForSeconds(4);
                     dealDamage(1,playerTwoHP,25);
                     break;
                 }
@@ -383,15 +383,17 @@ public class fightinghandler : MonoBehaviour
         {
             variable.vPasser.winner = 2;
             yield return new WaitForSeconds(2);
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
         if (playerTwoHP <= 0)
         {
             variable.vPasser.winner = 1;
             yield return new WaitForSeconds(2);
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
         }
+
+
 
     }
 
